@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1517060775 source:/home/emin/Belgeler/2018/07_ogrenci/main.cpp
+	<iostream>
+	"ogrenci.h"
+
+1517058877 source:/home/emin/Belgeler/2018/07_ogrenci/ogrenci.cpp
+	"ogrenci.h"
+
+1517057942 /home/emin/Belgeler/2018/07_ogrenci/ogrenci.h
+	<iostream>
+

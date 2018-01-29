@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1517124702 source:/home/emin/Belgeler/2018/08_saat/main.cpp
+	<iostream>
+	"timer.h"
+
+1517124723 /home/emin/Belgeler/2018/08_saat/timer.h
+	<iostream>
+
+1517065006 source:/home/emin/Belgeler/2018/08_saat/timer.cpp
+	"timer.h"
+

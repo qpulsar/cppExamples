@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1517174882 source:/home/emin/Belgeler/2018/12_yildiz_class/main.cpp
+	<iostream>
+	"util.h"
+	"termcolor.hpp"
+	"star.h"
+	<time.h>
+	<stdlib.h>
+
+1517174925 /home/emin/Belgeler/2018/12_yildiz_class/util.h
+	<termios.h>
+	"termcolor.hpp"
+
+1454255380 /home/emin/Belgeler/2018/12_yildiz_class/termcolor.hpp
+	<unistd.h>
+	<io.h>
+	<windows.h>
+	<iostream>
+	<cstdio>
+
+1517149540 source:/home/emin/Belgeler/2018/12_yildiz_class/star.cpp
+	"star.h"
+
+1517149724 /home/emin/Belgeler/2018/12_yildiz_class/star.h
+	"termcolor.hpp"
+	<iostream>
+

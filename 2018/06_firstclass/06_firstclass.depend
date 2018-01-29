@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1517053355 source:/home/emin/Belgeler/2018/06_firstclass/first.cpp
+	"first.h"
+	<iostream>
+
+1517053800 /home/emin/Belgeler/2018/06_firstclass/first.h
+
+1517053532 source:/home/emin/Belgeler/2018/06_firstclass/main.cpp
+	<iostream>
+	"first.h"
+

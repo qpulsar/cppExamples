@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1517139333 source:/home/emin/Belgeler/2018/10_anne/anne.cpp
+	"anne.h"
+
+1517139366 /home/emin/Belgeler/2018/10_anne/anne.h
+	<iostream>
+
+1517140796 source:/home/emin/Belgeler/2018/10_anne/main.cpp
+	<iostream>
+	"anne.h"
+	"cocuk.h"
+
+1517140534 /home/emin/Belgeler/2018/10_anne/cocuk.h
+	"anne.h"
+	"baba.h"
+
+1517139953 source:/home/emin/Belgeler/2018/10_anne/cocuk.cpp
+	"cocuk.h"
+
+1517140357 /home/emin/Belgeler/2018/10_anne/baba.h
+	<iostream>
+
+1517140461 source:/home/emin/Belgeler/2018/10_anne/baba.cpp
+	"baba.h"
+

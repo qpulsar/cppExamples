@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1517137373 source:/home/emin/Belgeler/2018/09_point/dandik.cpp
+	"dandik.h"
+
+1517138467 /home/emin/Belgeler/2018/09_point/dandik.h
+	<iostream>
+
+1517138635 source:/home/emin/Belgeler/2018/09_point/main.cpp
+	<iostream>
+	"dandik.h"
+
