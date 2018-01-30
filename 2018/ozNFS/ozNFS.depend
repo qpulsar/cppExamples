@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1454424184 source:/home/emin/Code/ab/gun4/ozNFS/main.cpp
+	<iostream>
+	"util.h"
+	"termcolor.hpp"
+	"araba.h"
+
+1454417893 /home/emin/Code/ab/gun4/ozNFS/util.h
+	<stdio.h>
+	<sys/select.h>
+	<termios.h>
+	<stropts.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<iostream>
+	"termcolor.hpp"
+
+1454255381 /home/emin/Code/ab/gun4/ozNFS/termcolor.hpp
+	<unistd.h>
+	<io.h>
+	<windows.h>
+	<iostream>
+	<cstdio>
+
+1454420978 /home/emin/Code/ab/gun4/ozNFS/araba.h
+	"varlik.h"
+	"termcolor.hpp"
+
+1454421376 /home/emin/Code/ab/gun4/ozNFS/varlik.h
+	<iostream>
+
+1454420431 source:/home/emin/Code/ab/gun4/ozNFS/varlik.cpp
+	"varlik.h"
+
+1454422366 source:/home/emin/Code/ab/gun4/ozNFS/araba.cpp
+	"araba.h"
+
+1454422366 source:/home/emin/Belgeler/Code/ab/gun4/ozNFS/araba.cpp
+	"araba.h"
+
+1454420978 /home/emin/Belgeler/Code/ab/gun4/ozNFS/araba.h
+	"varlik.h"
+	"termcolor.hpp"
+
+1454421376 /home/emin/Belgeler/Code/ab/gun4/ozNFS/varlik.h
+	<iostream>
+
+1454255380 /home/emin/Belgeler/Code/ab/gun4/ozNFS/termcolor.hpp
+	<unistd.h>
+	<io.h>
+	<windows.h>
+	<iostream>
+	<cstdio>
+
+1454420430 source:/home/emin/Belgeler/Code/ab/gun4/ozNFS/varlik.cpp
+	"varlik.h"
+
+1517317903 source:/home/emin/Belgeler/Code/ab/gun4/ozNFS/main.cpp
+	<iostream>
+	"util.h"
+	"termcolor.hpp"
+	"araba.h"
+
+1454417892 /home/emin/Belgeler/Code/ab/gun4/ozNFS/util.h
+	<stdio.h>
+	<sys/select.h>
+	<termios.h>
+	<stropts.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<iostream>
+	"termcolor.hpp"
+
