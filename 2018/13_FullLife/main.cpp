@@ -6,6 +6,8 @@
 #include"mermi.h"
 #include"dusman.h"
 #include<vector>
+#include<time.h>
+#include<stdlib.h>
 using namespace std;
 void dolgu(int bx, int by,int sx, int sy, int r)
 {
@@ -25,19 +27,28 @@ void ekran()
 {
     dolgu(1,1,81,20,1);
     dolgu(1,20,81,25,2);
-
+}
+void oldum(bool *dev)
+{
+    *dev = false;
+    termcolor::gotoxy(5,10);
+    cout<<termcolor::on_grey;
+    cout<<termcolor::red;
+    cout<<" GAME BITTI !!!";
+    getch();
 }
 int main()
 {
-    system("setterm -cursor off");
+    system("setterm -cursor off");///linux
+    srand(time(NULL));
     ekran();
-    terminal_ayarla(); ///ubuntu
+    terminal_ayarla(); ///linux
     Engel *safran = NULL;
     int engelZaman = rand()%30;
     long unsigned int frm=0;
     Hero *Bahattin = new Hero;
     unsigned char tus;
-    nonblock(NB_ENABLE); ///ubuntu
+    nonblock(NB_ENABLE); ///linux
     vector<Mermi*>mermiler;
     vector<Mermi*>::iterator mer;
     vector<Dusman*>kostoklar;
@@ -181,14 +192,20 @@ int main()
             Bahattin->getY()+3>=safran->getY()
           )
         {
-            devam = false;
-            termcolor::gotoxy(5,10);
-            cout<<termcolor::on_grey;
-            cout<<termcolor::red;
-            cout<<" GAME BITTI !!!";
-            getch();
+            oldum(&devam);
         }
+        for(vector<Dusman*>::iterator kos=kostoklar.begin();
+            kos!=kostoklar.end();kos++)
+        {
+            int egil = Bahattin->getOtur()?2:0;
 
+            if(Bahattin->getX()+2>=(*kos)->getX()&&  //sağı
+               Bahattin->getX()<=(*kos)->getX()+1&&  //solu
+               Bahattin->getY()+egil<=(*kos)->getY()+1&&  //kafası
+               Bahattin->getY()+3>=(*kos)->getY()    //ayakları
+               )
+               oldum(&devam);
+        }
         //bilgi
         termcolor::gotoxy(1,1);
         cout<<termcolor::on_blue;
