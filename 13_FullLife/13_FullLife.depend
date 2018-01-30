@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1517304794 source:/home/emin/Belgeler/2018/13_FullLife/main.cpp
+	<iostream>
+	"termcolor.hpp"
+	"util.h"
+	"engel.h"
+	"hero.h"
+	"mermi.h"
+	"dusman.h"
+	<vector>
+
+1454255380 /home/emin/Belgeler/2018/13_FullLife/termcolor.hpp
+	<unistd.h>
+	<io.h>
+	<windows.h>
+	<iostream>
+	<cstdio>
+
+1517209993 /home/emin/Belgeler/2018/13_FullLife/util.h
+	<termios.h>
+	"termcolor.hpp"
+
+1517214658 source:/home/emin/Belgeler/2018/13_FullLife/varlik.cpp
+	"varlik.h"
+
+1517217195 /home/emin/Belgeler/2018/13_FullLife/varlik.h
+	<iostream>
+	"termcolor.hpp"
+
+1517216893 source:/home/emin/Belgeler/2018/13_FullLife/engel.cpp
+	"engel.h"
+
+1517215236 /home/emin/Belgeler/2018/13_FullLife/engel.h
+	"varlik.h"
+
+1517231416 source:/home/emin/Belgeler/2018/13_FullLife/hero.cpp
+	"hero.h"
+
+1517225609 /home/emin/Belgeler/2018/13_FullLife/hero.h
+	"varlik.h"
+
+1517235638 source:/home/emin/Belgeler/2018/13_FullLife/mermi.cpp
+	"mermi.h"
+
+1517236539 /home/emin/Belgeler/2018/13_FullLife/mermi.h
+	"varlik.h"
+
+1517297835 source:/home/emin/Belgeler/2018/13_FullLife/dusman.cpp
+	"dusman.h"
+
+1517296790 /home/emin/Belgeler/2018/13_FullLife/dusman.h
+	"varlik.h"
+
