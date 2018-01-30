@@ -1,10 +1,13 @@
 # depslib dependency file v1.0
-1517230760 source:/home/emin/Belgeler/2018/13_FullLife/main.cpp
+1517302799 source:/home/emin/Belgeler/2018/13_FullLife/main.cpp
 	<iostream>
 	"termcolor.hpp"
 	"util.h"
 	"engel.h"
 	"hero.h"
+	"mermi.h"
+	"dusman.h"
+	<vector>
 
 1454255380 /home/emin/Belgeler/2018/13_FullLife/termcolor.hpp
 	<unistd.h>
@@ -40,5 +43,11 @@
 	"mermi.h"
 
 1517236539 /home/emin/Belgeler/2018/13_FullLife/mermi.h
+	"varlik.h"
+
+1517297835 source:/home/emin/Belgeler/2018/13_FullLife/dusman.cpp
+	"dusman.h"
+
+1517296790 /home/emin/Belgeler/2018/13_FullLife/dusman.h
 	"varlik.h"
 

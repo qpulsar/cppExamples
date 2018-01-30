@@ -4,6 +4,7 @@
 #include"engel.h"
 #include"hero.h"
 #include"mermi.h"
+#include"dusman.h"
 #include<vector>
 using namespace std;
 void dolgu(int bx, int by,int sx, int sy, int r)
@@ -39,8 +40,17 @@ int main()
     nonblock(NB_ENABLE); ///ubuntu
     vector<Mermi*>mermiler;
     vector<Mermi*>::iterator mer;
-
+    vector<Dusman*>kostoklar;
+    int dusmanZaman = rand()%30+50;
+    int ziplaUstSinir;
+    bool devam = true;
     do{
+        if(dusmanZaman==frm)
+        {
+            Dusman *dsm = new Dusman;
+            kostoklar.push_back(dsm);
+            dusmanZaman = rand()%20+10+frm;
+        }
         if(safran==NULL&&engelZaman==frm)
         {
             safran=new Engel();
@@ -66,11 +76,16 @@ int main()
                 {
                     Bahattin->setZipla(true);
                     Bahattin->setYuksel(true);
+                    if(Bahattin->getOtur())
+                        ziplaUstSinir = 7;
+                    else
+                        ziplaUstSinir = 4;
                 }
             }else if(tus==' ')
             {
+                int namlu = Bahattin->getOtur()?2:1;
                 Mermi *dan = new Mermi(Bahattin->getX()+3,
-                                        Bahattin->getY()+1);
+                                        Bahattin->getY()+namlu);
                 mermiler.push_back(dan);
             }
         }
@@ -79,7 +94,7 @@ int main()
             if(Bahattin->getYuksel())
             {
                 Bahattin->hareket(0,-1);
-                if(Bahattin->getY()<4)
+                if(Bahattin->getY()<ziplaUstSinir)
                     Bahattin->setYuksel(false);
             }else
             {
@@ -92,11 +107,26 @@ int main()
         {
             (*mer)->hareket(1,0);
         }
+        for(vector<Dusman*>::iterator kos=kostoklar.begin();
+            kos!=kostoklar.end();kos++)
+        {
+            (*kos)->hareket(-1,0);
+        }
+
         Sleep(50);
         mer=mermiler.begin();
         while(mer!=mermiler.end())
         {
-            if((*mer)->getX()>79)
+
+            if(
+                (*mer)->getX()>79 ||
+                (
+                    safran!=NULL &&
+                    (*mer)->getX()>=safran->getX() &&
+                    (*mer)->getX()<=safran->getX()+3&&
+                    (*mer)->getY()>=safran->getY()
+                )
+               )
             {
                 delete *mer;
                 mermiler.erase(mer);
@@ -111,6 +141,54 @@ int main()
             safran = NULL;
             engelZaman = frm+rand()%30;
         }
+        vector<Dusman*>::iterator pyd;
+        pyd = kostoklar.begin();
+        while(pyd!=kostoklar.end())
+        {
+            vector<Mermi*>::iterator domdom;
+            domdom=mermiler.begin();
+            bool carptimi = false;
+            if((*pyd)->getX()<2)
+            {
+                delete *pyd;
+                kostoklar.erase(pyd);
+                continue;
+            }
+            while (domdom!=mermiler.end())
+            {
+                if((*domdom)->getX() >= (*pyd)->getX()&&
+                   (*domdom)->getY() >= (*pyd)->getY()&&
+                   (*domdom)->getY() <= (*pyd)->getY()+1
+                  )
+                {
+                    delete *pyd;
+                    delete *domdom;
+                    mermiler.erase(domdom);
+                    kostoklar.erase(pyd);
+                    carptimi=true;
+                    break;
+                }
+                else
+                    domdom++;
+            }
+            if(!carptimi)
+                pyd++;
+        }
+        //Ölüm kontrolü
+        if(safran!=NULL&&
+            Bahattin->getX()+2>=safran->getX()&&
+            Bahattin->getX()<=safran->getX()+2&&
+            Bahattin->getY()+3>=safran->getY()
+          )
+        {
+            devam = false;
+            termcolor::gotoxy(5,10);
+            cout<<termcolor::on_grey;
+            cout<<termcolor::red;
+            cout<<" GAME BITTI !!!";
+            getch();
+        }
+
         //bilgi
         termcolor::gotoxy(1,1);
         cout<<termcolor::on_blue;
@@ -118,7 +196,7 @@ int main()
         cout<<"frm="<<frm;
         termcolor::gotoxy(15,1);
         cout<<"ez="<<engelZaman;
-    }while(1);
+    }while(devam);
     getch();
     return 0;
 }
